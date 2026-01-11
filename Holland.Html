@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Darktech 👁️</title>
+  <!-- CSS -->
+  <style>
+
+    body {
+      margin: 0;
+      background-image: url(resources/HMBackground.png);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .content {
+        margin: 40px auto 0;
+        padding: 30px 40px;
+
+        max-width: 800px;
+        width: calc(100% - 40px);
+
+        background: rgba(194, 190, 199, 0.909);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+        text-align: center;
+    }
+
+        /* Afbeeldingen */
+    .examples {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+     justify-content: center;
+    }
+
+    .examples img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* LOGO GIF */
+    .logo-container {
+      padding: 10px 0;
+      text-align: center;       
+    }
+
+    .logo-gif {
+      width: 300px;            
+      max-width: 80%;
+    }
+
+    /* dropdown KNOP*/
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1000;
+    }
+
+    .menu-btn img {
+      width: 100px;
+      height: auto;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 150px;
+      height: 100%;
+      background-color: #6183c2;
+      padding-top: 90px;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    /* SIDEBAR ITEMS */
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 22px;
+      color: rgb(63, 168, 157);
+      text-decoration: none;
+    }
+
+    .sidebar-item img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .sidebar-item:hover {
+      background-color: #0e4369;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU KNOP -->
+  <button id="toggleSidebar" class="menu-btn">
+    <img src="resources/dropdown.gif" alt="Menu" />
+  </button>
+<!-- PORTOFOLIO LOGO -->
+ <div class="logo-container">
+  <img src="resources/hollandmechanicslogo.gif" alt="Mijn portfolio logo" class="logo-gif">
+</div>
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+
+    <a href="main.html" class="sidebar-item">
+      <img src="resources/homegif.gif" data-static="home.png" data-gif="home.gif" />
+    </a>
+
+    <a href="about.html" class="sidebar-item">
+      <img src="resources/about.gif" data-static="about.png" data-gif="about.gif" />
+    </a>
+
+    <a href="achievements.html" class="sidebar-item">
+      <img src="resources/achievementsicon.gif" data-static="projects.png" data-gif="projects.gif" />
+    </a>
+
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <h1>Holland Mechanics: De naven vervoer robot</h1>
+    <p>Dit project was een stage project dat was opgezet om het vervoeren van onderdelen binnen fabrieken gemakkelijker en sneller te maken.</p>
+    <p>Dit stageproject werd uitgevoerd door 3 stagaires en werd uitgevoerd in de regio purmerend.</p>
+    <p>Vanwegen privacy redenen, kan er intern niet veel verteld worden over de procedure, bouw en ontwikkeling van de robot.</p>
+    <p>Wel zal ik hier toelichten hoe en wat ik gedaan heb en wat ik ben opgestoken van mijn ervaring.</p>
+    <p>De opdracht was om een robot automatisch te laten rijden tussen twee plekken on nauwkeurige wijze.</p>
+  </div>
+
+  <div class="content">
+    <h1>project richting</h1>
+    <p>Ik ben bezig gegaan aan mogelijke ontwerpen , vormen en ideeën te schrijven om deze samen met het team van medewerkers en stagaires te bespreken. Dit zorgte voor een duidelijk beeld van wat we wilde bereiken en hoe we dit moesten aanpakken.</p>
+    <p>vanuit hier ben ik samen met mijn team een planning wezen opstellen,zodat onze opracht gever ook duidelijk een overzicht had van onze taken en wensen. Wij hebben hiermee ons aan de planning gehouden en konden hieruit gemakkelijk en effectief verder werken</p>
+  </div>
+
+  <div class="examples">
+    <img src="resources/navenvuller af.png" alt="beste karton prototype">
+  </div>
+
+  <div class="content">
+    <h1>Wat ik hierbij heb geleerd</h1>
+    <p>Door de privee inhoud van de robot, mag er niet veel over verteld worden. Wel mag ik zeggen dat ik ervaring heb opgedaan met het ontwikkelen van een gebruikers UI en met het werken met een Raspberry PI.</p>
+    <p>Verder heb ik fysieke taken zoals solderen, bedradingen koppelen, voltages uitmeten en onder controle houden geleerd en heb ik meerdere varianten van de "internals" gemaakt.</p>
+    <P>Door mijn doorzettende instelling, kwam het project zowel fysiek als digitaal goed van de grond en heeft Holland Mechanics een goede basis gekregen om mee verder te werken.</P>
+</div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const toggleBtn = document.getElementById("toggleSidebar");
+    const sidebar = document.getElementById("sidebar");
+    const btnImg = toggleBtn.querySelector("img");
+
+    // Sidebar openen/sluiten
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+
+    
+  </script>
+
+</body>
+</html>
