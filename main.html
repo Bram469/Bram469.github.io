@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bram.B mainpage</title>
+  <!-- CSS -->
+  <style>
+    body {
+      margin: 0;
+      background-image: url(resources/backgroundHome.png);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .content img{
+      width: 200px;
+      height: auto;
+    }
+
+    /* dropdown KNOP*/
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1000;
+    }
+
+    .menu-btn img {
+      width: 100px;
+      height: auto;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 150px;
+      height: 100%;
+      background-color: #6183c2;
+      padding-top: 90px;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    /* SIDEBAR ITEMS */
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 22px;
+      color: rgb(63, 168, 157);
+      text-decoration: none;
+    }
+
+    .sidebar-item img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .sidebar-item:hover {
+      background-color: #0e4369;
+    }
+
+    .content {
+      margin: 40px auto 0;
+      padding: 30px 40px;
+
+      max-width: 700px;
+      width: calc(100% - 40px);
+
+      background: rgba(50, 82, 187, 0.909);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+
+      text-align: center;
+    }
+    /* LOGO GIF */
+    .logo-container{
+      padding: 10px 0;
+      text-align: center;  
+    }
+    .logo-gif{
+      width: 300px;            
+      max-width: 80%;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU KNOP -->
+  <button id="toggleSidebar" class="menu-btn">
+    <img src="resources/dropdown.gif" alt="Menu" />
+  </button>
+<!-- PORTOFOLIO LOGO -->
+ <div class="logo-container">
+  <img src="resources/portofolio home.gif" alt="Mijn portfolio logo" class="logo-gif">
+</div>
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+
+    <a href="main.html" class="sidebar-item">
+      <img src="resources/homegif.gif" data-static="home.png" data-gif="home.gif" />
+    </a>
+
+    <a href="about.html" class="sidebar-item">
+      <img src="resources/about.gif" data-static="about.png" data-gif="about.gif" />
+    </a>
+
+    <a href="achievements.html" class="sidebar-item">
+      <img src="resources/achievementsicon.gif" data-static="projects.png" data-gif="projects.gif" />
+    </a>
+
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <h1>WELKOM!</h1>
+    <p>Welkom op mijn portofolio site.
+      Hier stop ik informatie over mijzelf en mijn prestaties.
+      Om de selectie te bekijken, klik op het icoon links boven
+    </p>
+    <img src="resources/me.png" alt="me">
+    <p></p>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const toggleBtn = document.getElementById("toggleSidebar");
+    const sidebar = document.getElementById("sidebar");
+    const btnImg = toggleBtn.querySelector("img");
+
+    // Sidebar openen/sluiten
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+
+    
+  </script>
+
+</body>
+</html>

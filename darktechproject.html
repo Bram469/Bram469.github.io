@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Darktech 👁️</title>
+  <!-- CSS -->
+  <style>
+
+    body {
+      margin: 0;
+      background-image: url(resources/darktechBackground.png);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
+
+    .content {
+      margin-top: 0;
+      padding: 0 20px;
+      text-align: center;
+      color: antiquewhite;
+    }
+
+        /* Afbeeldingen */
+    .examples {
+      display: flex;
+      gap: 20px;
+      margin-top: 20px;
+     justify-content: center;
+    }
+
+    .examples img {
+      width: 150px;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    /* LOGO GIF */
+    .logo-container {
+      padding: 10px 0;
+      text-align: center;       
+    }
+
+    .logo-gif {
+      width: 300px;            
+      max-width: 80%;
+    }
+
+    /* dropdown KNOP*/
+    .menu-btn {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      z-index: 1000;
+    }
+
+    .menu-btn img {
+      width: 100px;
+      height: auto;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -260px;
+      width: 150px;
+      height: 100%;
+      background-color: #6183c2;
+      padding-top: 90px;
+      transition: left 0.3s ease;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    /* SIDEBAR ITEMS */
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 16px 22px;
+      color: rgb(63, 168, 157);
+      text-decoration: none;
+    }
+
+    .sidebar-item img {
+      width: 100px;
+      height: 100px;
+    }
+
+    .sidebar-item:hover {
+      background-color: #0e4369;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- MENU KNOP -->
+  <button id="toggleSidebar" class="menu-btn">
+    <img src="resources/dropdown.gif" alt="Menu" />
+  </button>
+<!-- PORTOFOLIO LOGO -->
+ <div class="logo-container">
+  <img src="resources/darkTechlogo.gif" alt="Mijn portfolio logo" class="logo-gif">
+</div>
+  <!-- SIDEBAR -->
+  <div class="sidebar" id="sidebar">
+
+    <a href="main.html" class="sidebar-item">
+      <img src="resources/homegif.gif" data-static="home.png" data-gif="home.gif" />
+    </a>
+
+    <a href="about.html" class="sidebar-item">
+      <img src="resources/about.gif" data-static="about.png" data-gif="about.gif" />
+    </a>
+
+    <a href="achievements.html" class="sidebar-item">
+      <img src="resources/achievementsicon.gif" data-static="projects.png" data-gif="projects.gif" />
+    </a>
+
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+    <h1>Dark Tech: The controling wearable</h1>
+    <p>Dit project was een project wat bestemd was om de duistere zeide van technologie te tonen en een "provocatype"te ontwikkelen</p>
+    <p>Ik heb dit project samen met vier andere mede studenten uigevoerd, waarbij ik de rol kreeg als ontwerper, en prototype ontwikkelaar.</p>
+    <p>Wij waren opgedragen om een draagbare technologie te bedenken die een duister thema bevat.</p>
+    <p>Wij als groep mochten zelf invullen wat dit zou worden, en wij kwamen neer op een sport armband die mensen aanzet om te gaan gokken</p>
+    <p>Met dit systeem in gedachte heb ik onderzoek gedaan naar mogelijke voorbeelden en inspiratie bronnen.</p>
+    <p>Voorbeelden hiervan zijn: Een FitBit©, Een "Pip Boy" van de gameseries Fallout© en algemene slotmachines.</p>
+  </div>
+
+  <div class="examples">
+    <img src="resources/pipboy.jpg" alt="een Pip Boy">
+    <img src="resources/fitbit.jpg" alt="een FitBit">
+    <img src="resources/slotmachine.jpg" alt="een slotmachine">
+  </div>
+
+  <div class="content">
+    <h1>De begin ontwerpen</h1>
+    <p>Ik ben vanaf het moment dat het idee vastgesteld was begonnen met het brainstormen over mogelijke ontwerpen.</p>
+    <p>Ik ben dit project begonnen met kartonnen prototypen te maken.</p>
+    <p>Deze diende als inspirationele en effecteive visualisaties die wij konden gebruiken bij toekomstige 3d modellen</p>
+  </div>
+
+  <div class="examples">
+    <img src="resources/karton1.png" alt="beste karton prototype">
+    <img src="resources/karton2.png" alt="Een na beste prototype">
+    <img src="resources/karton3.png" alt="De slechtste prototype">
+  </div>
+
+  <div class="content">
+    <p>Deze prototypen waren op schaal gemaakt en werden gebruikt om een nauwkeurige "feel" te krijgen van hoe het product zou voelen.</p>
+    <p>Nadat ik deze prototypen aan mijn team had getoond, zijn wij bezig gegaan aan een tijdelijke 3d prototype.</p>
+    <p>Dit ontwerp heb ik samen met mijn teamgenoten besproken en heb ik bij het modeleren commentaar en actieve feedback gegeven</p>
+  </div>
+
+  <div class="content">
+    <p>Na deze ontwikkelde prototypen, zijn de ontwerpen getest op gebruikers en hiermee is feedback verzameld voor een 2e versie.</p>
+    <p>Aan de hand van deze resultaten, had ik een presenatie gegeven en een discussie gehouden over hoe het product verder ontwikkeld zou moeten worden.</p>
+  </div>
+
+  <div class="content">
+    <h1>Het Eindproduct</h1>
+    <p>Het resultaat van onze teamwork, en vele meetings leidde tot een vastberaden instelling en duidelijke visie van hoe het eidproduct vorm zou moeten nemen.</p>
+  </div>
+
+  <div class="examples">
+    <img src="resources/DarkEnd1.png" alt="end1">
+    <img src="resources/DarkEnd2.png" alt="end2">
+  </div>
+
+  <div class="content">
+    <h1>Wat ik hiervan heb geleerd</h1>
+    <p>Gedurende dit project heb ik ervaring opgedaan met het ontwerpen, prototypen en modeleren van concepten en ideeën</p>
+    <p>Ik heb ervaring opgedaan met de 3d software "Blender", met animatie software "pixilart" en algemene werk tools</p>
+    <p>Ik ben bezig gegaan met het onderzoeken van onze gebruikers en het opstellen van tests</p>
+    <p>En tot slot heb ik in een team effectieve communicatie uitgeoefend, en heb hiermee de motivatie/ "team-spirit" verhoogd</p>
+    <h1>Competenties (volgends de HBO standaard) die ik heb ontwikkeld</h1>
+    <p>Ik heb de competenties : ontwerpen, persoonlijk leiderschap, adviseren en analyseren allemaal op niveau afgerond</p>
+    <p>en heb hiermee het semester positief afgerond.</p>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    const toggleBtn = document.getElementById("toggleSidebar");
+    const sidebar = document.getElementById("sidebar");
+    const btnImg = toggleBtn.querySelector("img");
+
+    // Sidebar openen/sluiten
+    toggleBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+    });
+
+    
+  </script>
+
+</body>
+</html>
